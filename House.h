@@ -1,16 +1,43 @@
-
-#include "House.h"
-
+#include <string>
 
 
-House::House(Address address, int numBeds, int numBaths, int sqft, int price) :
 
-	address(address), numBeds(numBeds), numBaths(numBaths), sqft(sqft), price(price)
+struct Address
 
 {
 
-}
+	int houseNumber = 0;
 
-House::House()
+	std::string street = " ";
 
-{}
+	std::string city = " ";
+
+	std::string state = " ";
+
+	int zipcode = 0;
+
+};
+
+
+
+class House
+
+{
+
+public:
+
+	House();
+
+	House(Address, int, int, int, int);
+
+	Address address;
+
+	int numBeds;
+
+	int numBaths;
+
+	int sqft;
+
+	int price;
+
+};
